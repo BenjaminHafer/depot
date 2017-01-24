@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0358128-ad1f-4db4-8a09-f1030114e2dd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -601,12 +600,12 @@
       <option name="presentableId" value="Default" />
       <updated>1484849330433</updated>
       <workItem from="1484849331676" duration="2809000" />
-      <workItem from="1484861752759" duration="15984000" />
+      <workItem from="1484861752759" duration="16248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18793000" />
+    <option name="totallyTimeSpent" value="19057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1260" height="761" extended-state="0" />

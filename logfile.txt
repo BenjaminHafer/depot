@@ -1,0 +1,48 @@
+commit 6735f2f841bae45cd5cd085b39cf0eddc75174fc
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Mon Jan 23 20:16:54 2017 -0500
+
+    finished, working model on heroku
+
+commit b2325d4f14dcac8e9498b8fb5e7d027964e27809
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Mon Jan 23 20:12:37 2017 -0500
+
+    successfully uploaded to heroku, can create new products on heroku
+
+commit 32ffccf4c280e121dbb69b9a741b092f620386dc
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Mon Jan 23 19:36:28 2017 -0500
+
+    added carrierwave files, and aws s3 credentials about to deploy on heroku
+
+commit 19f3a76a5fcf17c3162be09b880eb0c9d9501a06
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Sun Jan 22 14:55:53 2017 -0500
+
+    refractored application.css to application.scss
+
+commit 87c4a163a48eb2d7a1f28abf90e971bd6bd0317f
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Thu Jan 19 17:42:02 2017 -0500
+
+    finished section B add validation
+
+commit 4de667f17ce8be06b314b77e2227467e0b5de15d
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Thu Jan 19 16:39:15 2017 -0500
+
+    back on master branch
+
+commit 2b1a276a71657999683a561e844ff3ec39d06463
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Thu Jan 19 16:04:13 2017 -0500
+
+    added images and completed A2 iteration
+
+commit db4db4be70c4bab2eee731f36a2a797f4f1c5f5e
+Author: the-hound <bchafer.bch@gmail.com>
+Date:   Thu Jan 19 13:28:35 2017 -0500
+
+     created rails app, added db migrate, scaffolding etc, at this point just ran bin/rails test with no |
+    failures

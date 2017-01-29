@@ -17,6 +17,7 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+gem "figaro"
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'

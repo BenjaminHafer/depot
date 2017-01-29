@@ -21,4 +21,6 @@
 .byebug_history
 
 # Ignore uploaded test images.
-/public/uploads
+#/public/uploads
+# Ignore application configuration
+/config/application.yml

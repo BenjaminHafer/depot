@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'hello_world', to: 'hello_world#index'
   resources :line_items
   resources :carts
   root 'store#index', as: 'store_index'

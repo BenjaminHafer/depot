@@ -32,6 +32,8 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
+        product.popularity = product.popularity + 1
+        product.update_attributes(:popularity => product.popularity)
         session[:counter] = 0
         format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
         format.json { render :show, status: :created, location: @line_item }

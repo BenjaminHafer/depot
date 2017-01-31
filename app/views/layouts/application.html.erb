@@ -23,8 +23,7 @@
         <li><a href="http://www..../faq">Questions</a></li>
         <li><a href="http://www..../news">News</a></li>
         <li><a href="http://www..../contact">Contact</a></li>
-        <li><a href="/">Catalog</a> </li>
-        <li><%= link_to "My Cart", cart_path(current_cart) if !request.env['PATH_INFO'].start_with?("/products") %></li>
+
       </ul>
     </div>
     <div id="main"> <%= yield %>

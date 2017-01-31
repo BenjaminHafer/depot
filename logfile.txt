@@ -1,3 +1,123 @@
+commit e272763b6d7046598553f93ce12711fe9de564be
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 15:09:38 2017 -0500
+
+    cant push to heroku
+
+commit e4fd2604078f54b0bc2aaaa41130160efa8c8f8f
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 15:03:34 2017 -0500
+
+    project3 rename
+
+commit 39152c484d28fe7e60f50acb980e9e1c754ef524
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 14:38:02 2017 -0500
+
+    fixed the my cart link so it will not show up on products pages, added popularity sort feature
+
+commit 011cde3ba2d95f85557bbb3d79d2676d324faa83
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 11:09:35 2017 -0500
+
+    adding bootstrap to project
+
+commit 4fd53872cedf170cba4b9bf71d544c6c410fbdba
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 10:25:49 2017 -0500
+
+    just added 'react_on_rails' gem
+
+commit 175cc43cc95406a943d5c0590e19f97233a3dca0
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Mon Jan 30 19:20:57 2017 -0500
+
+    added cart
+
+commit 45fa2c83edbdd6ad572ba86be3f3684f2933fd00
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Mon Jan 30 12:34:26 2017 -0500
+
+    xx
+
+commit 473ba1e12a91463cd74c419b530ca055dc0763b8
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Mon Jan 30 12:32:45 2017 -0500
+
+    zz
+
+commit d1a88db9b908454f70893d9f7dd845e89ab1f549
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Mon Jan 30 09:56:15 2017 -0500
+
+    zz
+
+commit 15e5d38f4ad75a770ed59bea5e3de48dfe99a90e
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 21:47:00 2017 -0500
+
+    zz
+
+commit 659efee888bcbd908f8cf7079a4984f7cae8961d
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 20:41:48 2017 -0500
+
+    zz
+
+commit 9ad64a05b0e3541872cfbcd518caf2551653dee7
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 20:35:34 2017 -0500
+
+    zz
+
+commit d355db31d44b3be64d5f6424d3d8cd14a67ec356
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 20:15:44 2017 -0500
+
+    zz
+
+commit 091c9bc514735ec53b976d155a4cf6d399497aef
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 20:03:13 2017 -0500
+
+    zz
+
+commit a6082a3e3163c8bef2017228c067f8419c4ce0c5
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 19:45:47 2017 -0500
+
+    reinistialized repository
+
+commit d86d832659e6adc2ff6298a19d2cc7cbb4c008ad
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 19:43:54 2017 -0500
+
+    xx
+
+commit 1f44c1511ff59b34ba003011ca45d0d38c5cea59
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 19:39:35 2017 -0500
+
+    zz
+
+commit 86778c1683b1329206d929c8ca0e69780ebc0c18
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Jan 29 19:24:30 2017 -0500
+
+    trying
+
+commit 542d04c233607d2e4b28c38be29eeae272a2b1a8
+Author: BenjaminHafer <bchafer@valdosta.edu>
+Date:   Sun Jan 29 18:03:39 2017 -0500
+
+    trying to push to git master
+
+commit 81666cb3af8aac0c1ca4b5b081ff00c06aff0b8a
+Author: BenjaminHafer <bchafer@valdosta.edu>
+Date:   Sun Jan 29 17:54:28 2017 -0500
+
+    fixed the s3 folder structure, added firago gem and fixed aws_...
+
 commit 6735f2f841bae45cd5cd085b39cf0eddc75174fc
 Author: the-hound <bchafer.bch@gmail.com>
 Date:   Mon Jan 23 20:16:54 2017 -0500

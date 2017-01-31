@@ -22,4 +22,8 @@ class StoreController < ApplicationController
     end
     session[:counter] += 1
   end
+  def current_cart
+    @cart = Cart.find(session[:cart_id])
+  end
+  helper_method :current_cart
 end

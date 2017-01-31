@@ -3,8 +3,6 @@ class Product < ApplicationRecord
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
 
-
-
   mount_uploader :image_url, PictureUploader
   validates :title, :description, :image_url, presence: true
   validates :title, uniqueness: true
@@ -12,9 +10,6 @@ class Product < ApplicationRecord
   validates :image_url, allow_blank: true, format: { with: %r{\.(gif|jpg|png)\Z}i,
                                                     message: 'must be a URL for GIF, JPG or PNG image.'
   }
-
-
-
   private
 
   # ensure that there are no line items referencing this product

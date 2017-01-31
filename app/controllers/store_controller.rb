@@ -1,6 +1,6 @@
 class StoreController < ApplicationController
   def index
-    @products = Product.order(:title)
+    @products = Product.order(popularity: :desc)
     @count = increment_count
     @time = Time.now
     @shown_message = "you've been here #{@count} times" if session[:counter] >5

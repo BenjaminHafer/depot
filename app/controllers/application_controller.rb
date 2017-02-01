@@ -1,9 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include CurrentCart
+  helper_method :current_cart
   before_action :set_cart, only: [:create]
 
-  helper_method :current_cart
+
   private
 
   before_filter :initialize_session

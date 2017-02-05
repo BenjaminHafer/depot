@@ -13,9 +13,25 @@ class StoreController < ApplicationController
           #    render 'index'
         end
       }
-      format.json {render json: @products}
+      format.json {render json: Product.order(sort_by + ' ' + order)}
     end
   end
+
+  private
+  def sort_by
+    %w(title
+          price
+          popularity).include?(params[:sort_by]) ? params[:sort_by] : 'popularity'
+  end
+  def order
+    %w(asc desc).include?(params[:order]) ? params[:order] : 'asc'
+  end
+  def search
+    products = Product.where("title LIKE '%#{params[:query]}%'")
+    render json: products
+  end
+
+
   def increment_count
     if session[:counter].nil?
       session[:counter] = 0

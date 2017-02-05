@@ -9,6 +9,10 @@ const Book = React.createClass ({
         popularity: React.PropTypes.number
     },
 
+    handleAddToCart: function(e) {
+        this.props.handleAddToCart(this.props.book.id);
+    },
+
     render: function() {
         return(
             <tr className="entry">
@@ -19,6 +23,12 @@ const Book = React.createClass ({
                 <td dangerouslySetInnerHTML={{__html: this.props.book.description}}></td>
                 <td>{this.props.book.price}</td>
                 <td>{this.props.book.popularity}</td>
+                <td>
+                    <a className="btn btn-primary btn-xs"
+                       onClick={this.handleAddToCart} >
+                        Add to Cart
+                    </a>
+                </td>
             </tr>
         )
     }

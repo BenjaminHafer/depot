@@ -29,8 +29,21 @@ const Catalog = React.createClass ({
     //Add a new function to handle "Add to Cart"
     // This function will be modified later.
     handleAddToCart: function(id){
-    console.log(id);
-},
+
+        var self = this;
+
+        axios.defaults.headers.common['X-Requested-With'] = "XMLHttpRequest";
+        axios.post('/line_items', {product_id: id})
+            .then(function (response) {
+                console.log(response);
+                window.location = response.headers.location;
+            })
+            .catch(function (error) {
+                console.log(error);
+                alert('Cannot sort events: ', error);
+            });
+
+    },
     handleSortColumn: function(name, order) {
         if (this.state.sort != name) {
             order = 'asc';

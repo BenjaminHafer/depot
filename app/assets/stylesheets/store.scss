@@ -26,6 +26,20 @@
       margin-bottom: 2px;
       color: #227;
     }
+    td {
+      min-width: 100px;
+
+      p{
+        margin-left: 0px;
+      }
+
+      img {
+        width: 80px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    }
+
     p, div.price_line {
       margin-left: 100px;
       margin-top: 0.5em;

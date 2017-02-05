@@ -1,7 +1,11 @@
 import React from 'react';
 import Book from './Book';
+import SortColumn from './sort_column';
 
 const BookList = React.createClass ({
+    handleSortColumn: function(name, order) {
+        this.props.handleSortColumn(name, order);
+    },
     render: function() {
         var books = [];
 
@@ -15,10 +19,31 @@ const BookList = React.createClass ({
                 <thead>
                 <tr>
                     <th className="col-md-2">Image url</th>
-                    <th className="col-md-2">Title</th>
+                    <th className="col-md-2 sortable">
+                        <SortColumn     name="title"
+                                        text="Title"
+                                        sort={this.props.sort}
+                                        order={this.props.order}
+                                        handleSortColumn={this.handleSortColumn}
+                        />
+                    </th>
                     <th className="col-md-6">Description</th>
-                    <th className="col-md-1">Price</th>
-                    <th className="col-md-1">Popularity</th>
+                    <th className="col-md-2 sortable">
+                        <SortColumn     name="price"
+                                        text="Price"
+                                        sort={this.props.sort}
+                                        order={this.props.order}
+                                        handleSortColumn={this.handleSortColumn}
+                        />
+                    </th>
+                    <th className="col-md-2 sortable">
+                        <SortColumn     name="popularity"
+                                        text="Popularity"
+                                        sort={this.props.sort}
+                                        order={this.props.order}
+                                        handleSortColumn={this.handleSortColumn}
+                        />
+                    </th>
                 </tr>
                 </thead>
                 <tbody>

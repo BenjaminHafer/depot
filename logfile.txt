@@ -1,3 +1,81 @@
+commit be691b75a680bc48d537cb8fdf088a6aacc0f90f
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Feb 5 19:26:05 2017 -0500
+
+    just deployed working version to heroku
+
+commit 6bb7c4946d8f5db8c600ac2c0c5167238401b925
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Feb 5 19:20:07 2017 -0500
+
+    fixed search bar
+
+commit 99f13b0b5e4bb5ddbb881465bedd7031bbe36148
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Feb 5 18:53:29 2017 -0500
+
+    2.5.1 completed, added working add to cart button ready to deploy
+
+commit c27a5d1fa32b8a87b0dc250a1e97771ce18ef79a
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Feb 5 18:50:43 2017 -0500
+
+    just finished 2.5 adding the button
+
+commit ddbd0475cccb826942e50736f53ad081eadf5353
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Feb 5 17:28:00 2017 -0500
+
+    just completed 2.3.1
+
+commit d179000c6837ca94d5c330bba7cbdd28d918b715
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Feb 5 17:15:50 2017 -0500
+
+    just completed 2.2 adding react spa funcitioning correctly
+
+commit d49f3fb8301de22b8e5539a7dae3acb68d94356b
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Sun Feb 5 16:28:34 2017 -0500
+
+    finished part E instructions, working on 2.1
+
+commit 90a09d533ab50567419c4bb0f50fc33fecc309c0
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 1 14:46:32 2017 -0500
+
+    new repository
+
+commit 270800b452adbf7e014285c981a809534a09d2ca
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 19:56:24 2017 -0500
+
+    changed ActiveRecord::RecordNotFound to store_con and applic_con
+
+commit fce90701bebce542e7ab6dcb2424520b07761ecc
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 19:34:21 2017 -0500
+
+    changed def current_cart function
+
+commit 0e46fadce811eb6b483c8ca0219565df6220fc1d
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 19:10:36 2017 -0500
+
+    moved helper_method above before_action call
+
+commit 704f3719bd3c53bcd7f43e101ee8f3c4285c2d33
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 18:53:09 2017 -0500
+
+    altered seed file
+
+commit 08733417a1723f93e504d450f22c15e40b528847
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Jan 31 15:50:35 2017 -0500
+
+    removed link, trying to push to heroku still
+
 commit e272763b6d7046598553f93ce12711fe9de564be
 Author: Benjamin Hafer <bchafer.bch@gmail.com>
 Date:   Tue Jan 31 15:09:38 2017 -0500

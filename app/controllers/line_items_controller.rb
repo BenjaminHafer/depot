@@ -35,7 +35,7 @@ class LineItemsController < ApplicationController
       if @line_item.save
         product.popularity = product.popularity + 1
         product.update_attributes(:popularity => product.popularity)
-        format.html { redirect_to @line_item.cart }
+        format.html { redirect_to store_index_url }
         format.json { redirect_to cart_path(@line_item.cart)}
       else
         format.html { render :new }

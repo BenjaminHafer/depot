@@ -17,8 +17,10 @@
 
   <div id="columns">
     <div id="side">
-      <div it="cart">
-        <%= render @cart %>
+      <div id="cart">
+        <% if @cart %>
+          <%= render @cart %>
+        <% end %>
       </div>
       <ul>
         <li><%= link_to "Home", store_index_path(spa: false) %></li>

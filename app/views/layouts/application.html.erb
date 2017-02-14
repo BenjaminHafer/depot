@@ -17,6 +17,9 @@
 
   <div id="columns">
     <div id="side">
+      <div it="cart">
+        <%= render @cart %>
+      </div>
       <ul>
         <li><%= link_to "Home", store_index_path(spa: false) %></li>
         <li><%= link_to "Home (SPA)", store_index_path(spa: true) %></li>

@@ -2,9 +2,12 @@ Rails.application.routes.draw do
   get 'hello_world', to: 'hello_world#index'
   get 'search', to: 'store#search'
   resources :line_items do
-    member do
-      put 'decrement'
-    end
+    #member do
+    #  put 'decrement'
+    #  post 'decrement'
+    #end
+      put 'decrement', on: :member
+      post 'decrement', on: :member
   end
   resources :carts
   root 'store#index', as: 'store_index'
@@ -12,4 +15,5 @@ Rails.application.routes.draw do
 
   resources :products
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

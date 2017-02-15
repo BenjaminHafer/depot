@@ -36,7 +36,7 @@ class LineItemsController < ApplicationController
         product.popularity = product.popularity + 1
         product.update_attributes(:popularity => product.popularity)
         format.html { redirect_to store_index_url }
-        format.json { redirect_to cart_path(@line_item.cart)}
+        format.json {render :show, status: :unprocessable_entity }
       else
         format.html { render :new }
         format.json { render json: @line_item.errors,

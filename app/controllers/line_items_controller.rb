@@ -10,6 +10,23 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
+  def decrement
+    @cart = current_cart
+    respond_to do |format|
+      if @line_item.quantity == 1
+        @line_item.destroy
+        format.html {render 'destroy'}
+        format.js { render 'carts/destroy' if !@cart.line_items.present? }
+        format.json { head :ok }
+      else
+        @line_item.update_attribute(:quantity, @line_item.quantity -= 1)
+        format.html { redirect_to store_url }
+        format.js { @current_item = @line_item }
+        format.json { head :ok }
+      end
+    end
+  end
+
   # GET /line_items/1
   # GET /line_items/1.json
   def show

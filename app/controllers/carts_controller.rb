@@ -13,6 +13,10 @@ class CartsController < ApplicationController
     if @cart.id != session[:cart_id]
       invalid_cart
     end
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # GET /carts/new

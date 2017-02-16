@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import BookList from './BookList';
 import axios from 'axios';
 import SearchForm from './search_form';
+import Cart from './Cart';
 const Catalog = React.createClass ({
     getInitialState: function() {
         return { books: [] ,
@@ -36,7 +37,7 @@ const Catalog = React.createClass ({
         axios.post('/line_items', {product_id: id})
             .then(function (response) {
                 console.log(response);
-                window.location = response.headers.location;
+                self.refs.cart.handleAddToCart(response.data);
             })
             .catch(function (error) {
                 console.log(error);
@@ -67,6 +68,9 @@ const Catalog = React.createClass ({
         return (
             <div className="container">
                 <div className="row">
+                    <div classID="col-md-6 pull-right">
+                        <Cart ref="cart" id={this.props.cart_id}/>
+                    </div>
                     <div className="col-md-12">
                         <SearchForm handleSearch={this.handleSearch} />
                     </div>

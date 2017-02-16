@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   include CurrentCart
-  before_action :set_cart, only: [:create]
+  before_action :set_cart, only: [:create, :decrement]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -11,10 +11,8 @@ class LineItemsController < ApplicationController
   end
 
   def decrement
-    @cart = current_cart
-
     @line_item = @cart.decrement_line_item_quantity(params[:id])
-    @line_item.product.popularity -= 1
+
 
     respond_to do |format|
       if @line_item.save
@@ -22,7 +20,9 @@ class LineItemsController < ApplicationController
         format.html { redirect_to store_path, notice: 'Line item was successfully updated.' }
         format.js {@current_item = @line_item}
         format.json { }
+
       else
+
         format.html { render action: "edit" }
         format.js {@current_item = @line_item}
         format.json { render json: @line_item.errors, status: :unprocessable_entity }

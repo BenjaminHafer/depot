@@ -1,4 +1,20 @@
 .store {
+  .carts {
+    text-align: right;
+
+    .item_price, .total_line {
+      text-align: right;
+    }
+
+    .total_line .total_cell {
+      font-weight: bold;
+      border-top: 1px solid #595;
+    }
+
+    input {
+      color: buttontext;
+    }
+  }
   h1 {
     margin: 0;
     padding-bottom: 0.5em;

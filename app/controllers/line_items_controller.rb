@@ -10,25 +10,7 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
-  def decrement
-    @line_item = @cart.decrement_line_item_quantity(params[:id])
 
-
-    respond_to do |format|
-      if @line_item.save
-
-        format.html { redirect_to store_path, notice: 'Line item was successfully updated.' }
-        format.js {@current_item = @line_item}
-        format.json { }
-
-      else
-
-        format.html { render action: "edit" }
-        format.js {@current_item = @line_item}
-        format.json { render json: @line_item.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # GET /line_items/1
   # GET /line_items/1.json
@@ -55,9 +37,12 @@ class LineItemsController < ApplicationController
       if @line_item.save
         product.popularity = product.popularity + 1
         product.update_attributes(:popularity => product.popularity)
+        @products = Product.all
+        ActionCable.server.broadcast 'products',
+                                     html: render_to_string('store/index',layout: false)
         format.html { redirect_to store_index_url }
         format.js { @current_item = @line_item }
-        format.json {render :show, status: :unprocessable_entity }
+        format.json {}
       else
         format.html { render :new }
         format.json { render json: @line_item.errors,
@@ -74,6 +59,7 @@ class LineItemsController < ApplicationController
       if @line_item.update(line_item_params)
         format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
         format.json { render :show, status: :ok, location: @line_item }
+
       else
         format.html { render :edit }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
@@ -88,6 +74,32 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def decrement
+    #@cart = current_cart
+    @line_item = @cart.decrement_line_item_quantity(params[:id]) # passing in line_item.id
+
+    respond_to do |format|
+      if @line_item.save
+        product = @line_item.product
+        product.popularity = product.popularity - 1
+        product.update_attributes(:popularity => product.popularity)
+        format.html { redirect_to store_path, notice: 'Line item was successfully updated' }
+        format.js {@current_item = @line_item}
+        format.json { head :ok}
+
+        @products = Product.all
+        ActionCable.server.broadcast 'products',
+            html: render_to_string('store/index',layout: false)
+
+      else
+
+        format.html { render action: "edit" }
+        format.js {@current_item = @line_item}
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+      end
     end
   end
 

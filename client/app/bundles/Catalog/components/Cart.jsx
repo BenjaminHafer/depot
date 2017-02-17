@@ -37,7 +37,7 @@ const Cart = React.createClass ({
                 self.setState({ total_price: response.data.total_price });
                 self.setState({ line_items: response.data.line_items });
 
-                // window.location = response.headers.location;
+                self.handleRemoveFromCart(response.data);
             })
             .catch(function (error) {
                 // console.log(error);
@@ -58,7 +58,7 @@ const Cart = React.createClass ({
                 self.setState({ total_price: response.data.total_price });
                 self.setState({ line_items: response.data.line_items });
 
-                // window.location = response.headers.location;
+                self.handleEmptyCart(response.data);
             })
             .catch(function (error) {
                 // console.log(error);

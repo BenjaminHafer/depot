@@ -36,12 +36,13 @@ const Catalog = React.createClass ({
     handleAddToCart: function(id){
 
         var self = this;
+
         axios.defaults.headers.common['X-Requested-With'] = "XMLHttpRequest";
         axios.post('/line_items', {product_id: id})
             .then(function (response) {
-                self.refs.cart.handleAddToCart(response.data);
-                console.log(response);
 
+                console.log(response);
+                self.refs.cart.handleAddToCart(response.data);
 
             })
             .catch(function (error) {
@@ -76,10 +77,11 @@ const Catalog = React.createClass ({
                     <div className="col-md-6 pull-right">
                         <Cart ref="cart" id = {this.props.cart_id}/>
                     </div>
+                </div>
                     <div className="col-md-12">
                         <SearchForm handleSearch={this.handleSearch} />
                     </div>
-                </div>
+
                 <div className="row">
                     <div className="col-md-12">
                         <BookList   books={this.state.books}

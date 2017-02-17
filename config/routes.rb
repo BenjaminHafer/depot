@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     #  put 'decrement'
     #  post 'decrement'
     #end
-      put 'decrement', on: :member
+      patch 'decrement', on: :member
       post 'decrement', on: :member
   end
   resources :carts

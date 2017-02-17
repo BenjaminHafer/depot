@@ -37,16 +37,17 @@ class LineItemsController < ApplicationController
       if @line_item.save
         product.popularity = product.popularity + 1
         product.update_attributes(:popularity => product.popularity)
-        @products = Product.all
-        ActionCable.server.broadcast 'products',
-                                     html: render_to_string('store/index',layout: false)
+
+
         format.html { }
         format.js { @current_item = @line_item }
-        format.json {}
+        format.json { }
+
       else
         format.html { render :new }
         format.json { render json: @line_item.errors,
                              status: :unprocessable_entity }
+
       end
     end
   end

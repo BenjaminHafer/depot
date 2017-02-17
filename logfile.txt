@@ -1,3 +1,119 @@
+commit c3d5f31eb9b01e8c6d0fe23737fcd91bb6dff987
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Fri Feb 17 13:38:28 2017 -0500
+
+     heroku take 3
+
+commit 28fdd1d59285502b344385e283b944abe62b37be
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Fri Feb 17 13:27:32 2017 -0500
+
+     turn in version
+
+commit 1fe63ae8147e438b047e070abdd8f05b3c1aded2
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Fri Feb 17 09:20:18 2017 -0500
+
+    decrement buttons works, have to refresh page though to see changes
+
+commit 610cdf7266a24fd12e328a61d483acbe0667122e
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Thu Feb 16 19:09:56 2017 -0500
+
+    ajaxifying cart
+
+commit 111322c2a03e82e10de30c058b7bcdcad405083a
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Thu Feb 16 19:09:38 2017 -0500
+
+    working on part 3 again
+
+commit 6aad5a93ea2bed2cdf2d6139a3210fb9b19b51bb
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Thu Feb 16 09:46:04 2017 -0500
+
+    working on part 3 again
+
+commit 549ed96f00942d49bc1cd0d2196e6aca5af01c55
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Thu Feb 16 09:45:19 2017 -0500
+
+    fixed the popularity, adds and subtracts ajax style
+
+commit 64c2c8b3b4989298543aba4ca7935584bcb67847
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 21:40:40 2017 -0500
+
+    trying to figure out why product = @line_item.product
+            product.popularity = product.popularity -1
+            product.update_attributes(:popularity => product.popularity) looses ajax properties
+
+commit 1bc8b9c999824ff5d09311f91425ef1b41348778
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 20:04:30 2017 -0500
+
+    starting 3.3
+
+commit 2bace53942697d31432bead8ba63838bb4952847
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 14:57:12 2017 -0500
+
+    decrement button now working
+
+commit e543ae33f761fd9e7de8fa409e5096b10df39eaa
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 14:32:04 2017 -0500
+
+    have the - button on the page, not decrementing though
+
+commit 88cb8321fd4a15641b48fbaa64a632bd3edbd16f
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 13:10:29 2017 -0500
+
+    Just completed Iteration F5, action cable is working
+
+commit 7d0bae87fd971ad92aa4f5940128017026094929
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 12:59:52 2017 -0500
+
+    Completed iteration F4
+
+commit 5f6fb94ce3711cfbee0b828df8ce8acb93fb16d9
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 12:46:02 2017 -0500
+
+    just completed iteration F3, everything is working smoothly, items highlight when added to the cart, ajax working
+
+commit c7f3401a01f050578b63445a5f607939492507dc
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Wed Feb 15 12:29:28 2017 -0500
+
+    just finished iteration F2, everything working, correct button colors
+
+commit 0953f416ea8f3b1e43f53c6b30e24cd61c78b251
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 14 13:56:39 2017 -0500
+
+    just complete f1, now to begin on f2, Ajax based cart
+
+commit 9b08f84e55dbfc84ae148099e26ab0b753e3c300
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 14 13:39:02 2017 -0500
+
+    moved cart partial to the side bar
+
+commit 62926534d619af2cc7045e3a03f4e83916ec537b
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Thu Feb 9 12:35:42 2017 -0500
+
+    just entered test branch
+
+commit 984a9b4c8a6460b9311a7f4d959014675ee0f9e2
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Thu Feb 9 12:33:34 2017 -0500
+
+    starting project 5, ran the very first partial template commands
+
 commit be691b75a680bc48d537cb8fdf088a6aacc0f90f
 Author: Benjamin Hafer <bchafer.bch@gmail.com>
 Date:   Sun Feb 5 19:26:05 2017 -0500

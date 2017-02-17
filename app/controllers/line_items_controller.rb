@@ -38,6 +38,11 @@ class LineItemsController < ApplicationController
       if @line_item.save
         product.popularity = product.popularity + 1
         product.update_attributes(:popularity => product.popularity)
+        if (@spa = false)
+          @products = Product.all
+          ActionCable.server.broadcast 'products',
+              html: render_to_string('store/index', layout: false)
+        end
 
 
         format.html { }
@@ -89,6 +94,7 @@ class LineItemsController < ApplicationController
         product = @line_item.product
         product.popularity = product.popularity - 1
         product.update_attributes(:popularity => product.popularity)
+
         format.html { redirect_to store_path, notice: 'Line item was successfully updated' }
         format.js {@current_item = @line_item}
         format.json { }

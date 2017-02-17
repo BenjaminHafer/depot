@@ -29,7 +29,7 @@ const Cart = React.createClass ({
 
     handleRemoveFromCart: function(id){
         var self = this;
-
+        console.log(id.toString());
         axios.defaults.headers.common['X-Requested-With'] = "XMLHttpRequest";
         axios.patch('/line_items/'+id+'/decrement')
             .then(function (response) {
@@ -40,8 +40,8 @@ const Cart = React.createClass ({
                 self.handleRemoveFromCart(response.data);
             })
             .catch(function (error) {
-                // console.log(error);
-                alert('Cannot remove line item: ', error);
+                 console.log(error);
+                //alert('Cannot remove line item: ', error);
             });
 
     },
@@ -55,14 +55,15 @@ const Cart = React.createClass ({
             .then(function (response) {
                 console.log(response.data);
                 self.setState({ id: 0 });
-                self.setState({ total_price: response.data.total_price });
                 self.setState({ line_items: response.data.line_items });
+                self.setState({ total_price: response.data.total_price });
+
 
                 self.handleEmptyCart(response.data);
             })
             .catch(function (error) {
                 // console.log(error);
-                alert('Cannot empty cart: ', error);
+                //alert('Cannot empty cart: ', error);
             });
 
     },

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     #  post 'decrement'
     #end
       patch 'decrement', on: :member
-      post 'decrement', on: :member
+      #post 'decrement', on: :member
   end
   resources :carts
   root 'store#index', as: 'store_index'
@@ -17,3 +17,4 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end
+mount ActionCable.server => '/cable'

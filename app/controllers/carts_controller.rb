@@ -66,10 +66,13 @@ class CartsController < ApplicationController
       item.product.popularity = item.product.popularity - item.quantity
       item.product.update_attributes(:popularity => item.product.popularity)
     end
+
+    @cart.destroy if @cart.id == session[:id]
     session[:cart_id] = nil
+
     respond_to do |format|
       format.html { redirect_to store_index_url }
-      format.json { head :no_content }
+      format.json {  }
     end
   end
 

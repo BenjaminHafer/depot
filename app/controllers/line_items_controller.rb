@@ -1,8 +1,9 @@
 class LineItemsController < ApplicationController
-  skip_before_filter :verify_authenticity_token
+
   include CurrentCart
   before_action :set_cart, only: [:create, :decrement]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   # GET /line_items
   # GET /line_items.json
@@ -74,7 +75,8 @@ class LineItemsController < ApplicationController
     @line_item.destroy
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
-      format.json { head :no_content }
+      format.js {@current_item = @line_item}
+      format.json {  }
     end
   end
 
@@ -91,9 +93,6 @@ class LineItemsController < ApplicationController
         format.js {@current_item = @line_item}
         format.json { }
 
-        @products = Product.all
-        ActionCable.server.broadcast 'products',
-            html: render_to_string('store/index',layout: false)
 
       else
 

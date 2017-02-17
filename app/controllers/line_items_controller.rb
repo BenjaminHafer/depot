@@ -40,7 +40,7 @@ class LineItemsController < ApplicationController
         @products = Product.all
         ActionCable.server.broadcast 'products',
                                      html: render_to_string('store/index',layout: false)
-        format.html { redirect_to store_index_url }
+        format.html { }
         format.js { @current_item = @line_item }
         format.json {}
       else
@@ -88,7 +88,7 @@ class LineItemsController < ApplicationController
         product.update_attributes(:popularity => product.popularity)
         format.html { redirect_to store_path, notice: 'Line item was successfully updated' }
         format.js {@current_item = @line_item}
-        format.json { head :ok}
+        format.json { }
 
         @products = Product.all
         ActionCable.server.broadcast 'products',

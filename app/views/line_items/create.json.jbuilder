@@ -1,4 +1,8 @@
+
+json.id @cart.id
+
 json.line_items @cart.line_items do |line_item|
+
   json.id                 line_item.id
   json.quantity           line_item.quantity
   json.title              line_item.product.title

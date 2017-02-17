@@ -3,12 +3,18 @@ import BookList from './BookList';
 import axios from 'axios';
 import SearchForm from './search_form';
 import Cart from './Cart';
+
+
 const Catalog = React.createClass ({
     getInitialState: function() {
         return { books: [] ,
                 sort: "popularity",
                 order: "asc"
         };
+    },
+
+    handleSearch: function(books) {
+        this.setState({ books: books });
     },
 
     componentDidMount: function() {
@@ -24,24 +30,23 @@ const Catalog = React.createClass ({
                 console.log(error);
             });
     },
-    handleSearch: function(books) {
-        this.setState({ books: books });
-    },
+
     //Add a new function to handle "Add to Cart"
     // This function will be modified later.
     handleAddToCart: function(id){
 
         var self = this;
-
         axios.defaults.headers.common['X-Requested-With'] = "XMLHttpRequest";
         axios.post('/line_items', {product_id: id})
             .then(function (response) {
-                console.log(response);
                 self.refs.cart.handleAddToCart(response.data);
+                console.log(response);
+
+
             })
             .catch(function (error) {
                 console.log(error);
-                alert('Cannot sort events: ', error);
+                alert('Cannot add to cart ', error);
             });
 
     },
@@ -68,8 +73,8 @@ const Catalog = React.createClass ({
         return (
             <div className="container">
                 <div className="row">
-                    <div classID="col-md-6 pull-right">
-                        <Cart ref="cart" id={this.props.cart_id}/>
+                    <div className="col-md-6 pull-right">
+                        <Cart ref="cart" id = {this.props.cart_id}/>
                     </div>
                     <div className="col-md-12">
                         <SearchForm handleSearch={this.handleSearch} />

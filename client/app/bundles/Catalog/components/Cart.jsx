@@ -32,7 +32,7 @@ const Cart = React.createClass ({
 
         console.log(id.toString());
         axios.defaults.headers.common['X-Requested-With'] = "XMLHttpRequest";
-        axios.patch('/line_items/'+ this.props.id +'/decrement')
+        axios.patch('/line_items/'+ id +'/decrement')
             .then(function (response) {
                 console.log(response.data);
                 self.setState({ total_price: response.data.total_price });

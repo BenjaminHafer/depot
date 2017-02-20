@@ -88,12 +88,12 @@ class LineItemsController < ApplicationController
   def decrement
     #@cart = current_cart
     @line_item = @cart.decrement_line_item_quantity(params[:id]) # passing in line_item.id
+    product = @line_item.product
+    product.popularity = product.popularity - 1
+    product.update_attributes(:popularity => product.popularity)
 
     respond_to do |format|
       if @line_item.save
-        product = @line_item.product
-        product.popularity = product.popularity - 1
-        product.update_attributes(:popularity => product.popularity)
 
         format.html { redirect_to store_path, notice: 'Line item was successfully updated' }
         format.js {@current_item = @line_item}

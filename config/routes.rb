@@ -2,12 +2,8 @@ Rails.application.routes.draw do
   get 'hello_world', to: 'hello_world#index'
   get 'search', to: 'store#search'
   resources :line_items do
-    #member do
-    #  put 'decrement'
-    #  post 'decrement'
-    #end
-      patch 'decrement', on: :member
-      #post 'decrement', on: :member
+       patch 'decrement', on: :member
+
   end
   resources :carts
   root 'store#index', as: 'store_index'

@@ -29,18 +29,19 @@ const Cart = React.createClass ({
 
     handleRemoveFromCart: function(id){
         var self = this;
+
         console.log(id.toString());
         axios.defaults.headers.common['X-Requested-With'] = "XMLHttpRequest";
-        axios.patch('/line_items/'+id+'/decrement')
+        axios.patch('/line_items/'+ this.props.id +'/decrement')
             .then(function (response) {
                 console.log(response.data);
                 self.setState({ total_price: response.data.total_price });
                 self.setState({ line_items: response.data.line_items });
-
                 self.handleRemoveFromCart(response.data);
             })
             .catch(function (error) {
-                 console.log(error);
+                 console.log("The id is " + id.toString());
+
                 //alert('Cannot remove line item: ', error);
             });
 

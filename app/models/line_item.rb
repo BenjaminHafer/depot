@@ -5,15 +5,13 @@ class LineItem < ApplicationRecord
     product.price * quantity
   end
 
-  def decrement_quantity(line_item_id)
-    current_item = LineItem.find_by_id(line_item_id)
+  def decrement
 
-    if current_item.quantity > 1
-      current_item.quantity -= 1
+    if self.quantity > 1
+      self.quantity -= 1
     else
-      current_item.destroy
+      self.destroy
     end
-
-    current_item
+    self
   end
 end

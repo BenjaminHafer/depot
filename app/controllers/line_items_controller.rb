@@ -81,7 +81,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
       format.js {@current_item = @line_item}
-      format.json {  }
+      format.json { head :no_content  }
     end
   end
 

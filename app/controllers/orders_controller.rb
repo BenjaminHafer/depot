@@ -18,6 +18,10 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    respond_to do |format|
+      format.html
+      format.json { render json: {"redirect":true,"redirect_url": new_order_path }}
+    end
   end
 
   # GET /orders/1/edit

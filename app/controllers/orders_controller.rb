@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.order('created_at desc').paginate(page: params[:page],per_page: 10)
   end
 
   # GET /orders/1
@@ -18,6 +18,10 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    respond_to do |format|
+      format.html
+      format.json { render json: {"redirect":true,"redirect_url": new_order_path }}
+    end
   end
 
   # GET /orders/1/edit
@@ -28,11 +32,16 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-
+    @order.add_line_items_from_cart(@cart)
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        OrderNotifierMailer.received(@order).deliver
+        format.html { redirect_to store_index_url, notice:
+            'Thank you for your order.' }
+        format.json { render :show, status: :created,
+                             location: @order }
       else
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }

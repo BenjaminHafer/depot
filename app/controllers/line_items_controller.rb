@@ -81,20 +81,20 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
       format.js {@current_item = @line_item}
-      format.json {  }
+      format.json { head :no_content  }
     end
   end
 
   def decrement
     #@cart = current_cart
-    @line_item = @cart.decrement_line_item_quantity(params[:id]) # passing in line_item.id
-    product = @line_item.product
-    product.popularity = product.popularity - 1
-    product.update_attributes(:popularity => product.popularity)
+    @line_item = @cart.decrement_line_item_quantity(params[:id])
+    @products = Product.all
 
     respond_to do |format|
       if @line_item.save
-
+        product = @line_item.product
+        product.popularity = product.popularity - 1
+        product.update_attributes(:popularity => product.popularity)
         format.html { redirect_to store_path, notice: 'Line item was successfully updated' }
         format.js {@current_item = @line_item}
         format.json { }

@@ -3,7 +3,9 @@ import React from 'react';
 
 const LineItem = React.createClass ({
     propTypes: {
-
+        quantity: React.PropTypes.number,
+        title: React.PropTypes.string,
+        total_price: React.PropTypes.number,
     },
 
     handleRemoveFromCart: function(e) {

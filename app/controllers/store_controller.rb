@@ -5,7 +5,7 @@ class StoreController < ApplicationController
     @products = Product.order(popularity: :desc)
     @count = increment_count
     @time = Time.now
-    @shown_message = "you've been here #{@count} times" if session[:counter] >5
+   # @shown_message = "you've been here #{@count} times" if session[:counter] >5
     respond_to do |format|
       format.html {
         if (params[:spa] && params[:spa] == "true")

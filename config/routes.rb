@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :accounts,  :controllers => { :registrations => 'registrations' }
   resources :orders
 
+  resources :buyers, only: [:edit, :update]
+  resources :sellers, only: [:edit, :update]
+
   get 'hello_world', to: 'hello_world#index'
   get 'search', to: 'store#search'
 

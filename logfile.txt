@@ -1,3 +1,124 @@
+commit e92b10c63b1811c77beab2a50daa54ee6e5e28ab
+Merge: 545da98 c445018
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 18:50:10 2017 -0500
+
+    xx
+
+commit 545da98f017a54accdd44e1e1d7d6ebf8f1af69c
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 18:46:02 2017 -0500
+
+    about to merge in test
+
+commit c4450184520322bf3f978956c533ac945561a29f
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 18:43:48 2017 -0500
+
+    switching to master
+
+commit 43713d8257f2b52da68cb615a3b13e6019a28948
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 18:34:30 2017 -0500
+
+    just completed H, emailer works, received email @bchafer.bch account
+
+commit 6823ebc194c655b2b223ca0ab64c007c34e0f080
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 18:06:43 2017 -0500
+
+    everything is working it seems, setting up emailer now section H
+
+commit c5925cb43bf8b4db966172ad2dacae89755a4dcd
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 16:12:09 2017 -0500
+
+    fixed remove from cart glitch, was extra method call
+
+commit 42f8f76b3434648cea0a50e0f362e20e9227f3b2
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:52:42 2017 -0500
+
+    finied task g3
+
+commit b671c07bddaaa435f5071611c9a67dbaf7f8e8b4
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:26:36 2017 -0500
+
+    about to try add functioning to checkout button on spa side
+
+commit 7dfaf7d7417318ee4c89d29f8853eb678548efc8
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:20:22 2017 -0500
+
+    just completed G2, on products page, it shows the orders containing the book
+
+commit 740f4969236cf38045f8c65bfb97db9032f8cae5
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:16:54 2017 -0500
+
+    starting g2 in xu's directions
+
+commit d97648ab94dac1aca33f501a086876e8d670945a
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:11:19 2017 -0500
+
+    just completed G1, everything is working properly still
+
+commit cff79fe00349fb5866751ce1d10024925d9fa869
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:07:01 2017 -0500
+
+    starting page 180 adding the assert_redirected_to command
+
+commit 7c6232a756b78a3d8f2ffb3592a8bc4ea24aa492
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:02:41 2017 -0500
+
+    starting top of page 178 in the rails book
+
+commit 06ccf542f2183f6c00602341c7640313bf64fa44
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 13:01:38 2017 -0500
+
+    form validation works
+
+commit 554963a3f0648055b784ef4b19af75b88120231a
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 12:55:07 2017 -0500
+
+    just applied css to the order form, everything appears to be working fine
+
+commit 58572e140d18060d3cfff17d1e230d3ec86232d0
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Tue Feb 21 12:54:35 2017 -0500
+
+    just applied css to the order form, everything appears to be working fine
+
+commit 834a908e4d42d4d989eb8fb6b6152f45b8cc53d5
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Mon Feb 20 19:33:31 2017 -0500
+
+    what did i do wrong
+
+commit 067fcfe7b38c06f3e924dfad48bdd44cbdce65c9
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Mon Feb 20 18:56:45 2017 -0500
+
+    section G
+
+commit 52ee14525e6fc7e94b8d55f4de2696206f05a9c4
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Mon Feb 20 18:26:58 2017 -0500
+
+     redo decrement method
+
+commit fb136a67c09dcc38463fa6865155ba183dc984ea
+Author: Benjamin Hafer <bchafer.bch@gmail.com>
+Date:   Fri Feb 17 14:49:20 2017 -0500
+
+    checking out
+
 commit c3d5f31eb9b01e8c6d0fe23737fcd91bb6dff987
 Author: Benjamin Hafer <bchafer.bch@gmail.com>
 Date:   Fri Feb 17 13:38:28 2017 -0500

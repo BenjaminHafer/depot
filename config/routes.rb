@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :accounts
   resources :orders
 
   get 'hello_world', to: 'hello_world#index'

@@ -1,2 +1,10 @@
 <li><%= link_to 'Catalog', store_index_path(spa: false) %></li>
 <li><%= link_to "Catlog(SPA)", store_index_path(spa: true) %></li>
+
+<% if account_signed_in? %>
+    <li><%= link_to 'Edit account', edit_account_registration_path %></li>
+    <li><%= link_to 'Sign out', destroy_account_session_path, :method=>'delete' %></li>
+<% else %>
+    <li><%= link_to 'Sign in', new_account_session_path %></li>
+    <li><%= link_to 'Sign up', new_account_registration_path %></li>
+<% end %>

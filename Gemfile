@@ -29,6 +29,7 @@ gem 'mini_magick'
 gem 'faker'
 gem 'will_paginate'
 gem 'devise'
+gem 'simple_form'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

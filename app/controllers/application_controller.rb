@@ -1,22 +1,12 @@
 class ApplicationController < ActionController::Base
-  #protect_from_forgery with: :exception
-  protect_from_forgery unless: -> {request.format.json?}
+  protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  include CurrentCart
-  helper_method :current_cart
-  before_action :set_cart, only: [:create]
+  protected
 
-
-  private
-
-  before_filter :initialize_session
-
-  def initialize_session
-    # Called before any controller method
-    session[:store_index_count] ||= 0
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:type])
   end
-
-
-  end
+end
 
 

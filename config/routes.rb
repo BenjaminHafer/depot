@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :accounts
+  devise_for :accounts,  :controllers => { :registrations => 'registrations' }
   resources :orders
 
   get 'hello_world', to: 'hello_world#index'

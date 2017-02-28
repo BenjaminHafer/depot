@@ -1,3 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<%= react_component("Catalog", props: {catalog: @products, cart_id: @cart.id}, prerender: false) %>
+<% if account_signed_in? and current_account.accountable_type == "Seller" %>
+    <%= react_component("Catalog", props: {catalog: @products,
+                                           seller: true,
+                                           cart_id: @cart.id}, prerender: false) %>
+<% else %>
+    <%= react_component("Catalog", props: {catalog: @products,
+                                           seller: false,
+                                           cart_id: @cart.id}, prerender: false) %>
+<% end %>

@@ -15,6 +15,7 @@ const BookList = React.createClass ({
         this.props.books.forEach(function(book) {
             books.push(<Book book={book}
                              key={'book' + book.id}
+                             seller={this.props.seller}
                              handleAddToCart={this.handleAddToCart}/>);
         }.bind(this));
 
@@ -48,7 +49,9 @@ const BookList = React.createClass ({
                                         handleSortColumn={this.handleSortColumn}
                         />
                     </th>
-                    <th className="col-md-2">Actions</th>
+                    { this.props.seller ?  <th />:
+                        <th className="col-md-2">Actions</th>
+                    }
                 </tr>
                 </thead>
                 <tbody>

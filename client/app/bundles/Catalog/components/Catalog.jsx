@@ -84,11 +84,12 @@ const Catalog = React.createClass ({
 
                 <div className="row">
                     <div className="col-md-12">
-                        <BookList   books={this.state.books}
-                                    sort ={this.state.sort}
-                                    order={this.state.order}
-                                    handleSortColumn={this.handleSortColumn}
-                                    handleAddToCart={this.handleAddToCart}/>
+                        <BookList books={this.state.books}
+                                  sort ={this.state.sort}
+                                  order={this.state.order}
+                                  seller={this.props.seller}
+                                  handleSortColumn={this.handleSortColumn}
+                                  handleAddToCart={this.handleAddToCart} />
                     </div>
                 </div>
             </div>

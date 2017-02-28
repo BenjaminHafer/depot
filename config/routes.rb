@@ -16,6 +16,16 @@ Rails.application.routes.draw do
 
 
   resources :products
+
+  resources :sellers do
+    resources :products
+
+    member do
+      get 'orders', to: 'line_items#show_orders_for_seller'
+    end
+  end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

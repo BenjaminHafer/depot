@@ -109,6 +109,15 @@ class LineItemsController < ApplicationController
     end
   end
 
+  def show_orders_for_seller
+    seller = Seller.find(params[:id])
+    products = seller.products
+    @line_items = LineItem.where(product_id: products)
+    products.each do |product|
+      logger.info(product)
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_line_item

@@ -12,15 +12,15 @@
 
     <li role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        Settings (<%= (current_account.accountable.name.nil? or current_account.accountable.name == "") ? "No Name" : current_account.accountable.name %>) <span class="caret"></span>
+        Resources <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
         <% if current_account.accountable_type == "Seller" %>
-            <li><%= link_to 'Seller Profile', edit_seller_path(current_account.accountable_id) %></li>
+            <li><%= link_to 'My Products', seller_products_path(current_account.accountable_id) %></li>
+            <li><%= link_to 'My Orders', orders_seller_path(current_account.accountable_id) %></li>
         <% else %>
-            <li><%= link_to 'Buyer Profile', edit_buyer_path(current_account.accountable_id) %></li>
+            <li><%= link_to 'My Orders', "#" %></li>
         <% end %>
-        <li><%= link_to 'Account Settings', edit_account_registration_path %></li>
       </ul>
     </li>
 

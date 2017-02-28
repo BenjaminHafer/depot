@@ -7,7 +7,12 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.order('created_at desc').paginate(page: params[:page],per_page: 10)
+    if (params[:buyer_id])
+      @buyer = Buyer.find(params[:buyer_id])
+      @orders = @buyer.orders.order('created_at desc').paginate(page: params[:page],per_page: 10)
+    else
+      @orders = Order.order('created_at desc').paginate(page: params[:page],per_page: 10)
+    end
   end
 
   # GET /orders/1
@@ -18,6 +23,15 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+
+    if current_account && current_account.accountable_type == "Buyer"
+      #@order.buyer = current_account.accountable
+      @order.name     = current_account.accountable.name
+      @order.address  = current_account.accountable.address
+      @order.email  = current_account.email
+      @order.pay_type = current_account.accountable.pay_type.to_i
+    end
+
     respond_to do |format|
       format.html
       format.json { render json: {"redirect":true,"redirect_url": new_order_path }}
@@ -33,6 +47,11 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
+
+    if current_account && current_account.accountable_type == "Buyer"
+      @order.buyer = current_account.accountable
+    end
+
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
@@ -47,6 +66,7 @@ class OrdersController < ApplicationController
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /orders/1

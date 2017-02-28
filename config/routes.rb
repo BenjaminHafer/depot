@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :accounts
+    resources :super_accounts
 resources :buyers
 resources :carts
 resources :line_items
@@ -16,7 +17,7 @@ resources :sellers
 
   resources :buyers, only: [:edit, :update]
   resources :sellers, only: [:edit, :update]
-  resources :super_accounts
+
 
   get 'hello_world', to: 'hello_world#index'
   get 'search', to: 'store#search'

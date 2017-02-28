@@ -246,6 +246,8 @@ GEM
     pg (0.18.4)
     public_suffix (2.0.5)
     puma (3.6.2)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -363,6 +365,7 @@ DEPENDENCIES
   mini_racer
   pg (= 0.18.4)
   puma (~> 3.0)
+  pundit
   rails (~> 5.0.1)
   rails_12factor (= 0.0.2)
   react_on_rails (~> 6)

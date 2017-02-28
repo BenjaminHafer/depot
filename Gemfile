@@ -30,6 +30,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'devise'
 gem 'simple_form'
+gem 'pundit'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

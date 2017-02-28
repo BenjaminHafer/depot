@@ -5,6 +5,6 @@ class Account < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  ACCOUNT_TYPES=["Buyer", "Seller"]
+  ACCOUNT_TYPES=["SuperAccount", "Buyer", "Seller"]
   attr_accessor :type
 end

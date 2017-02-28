@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<% if account_signed_in? and current_account.accountable_type == "Seller" %>
+<% if account_signed_in? and ( current_account.accountable_type == "Seller" or current_account.accountable_type == "SuperAccount")%>
     <%= react_component("Catalog", props: {catalog: @products,
                                            seller: true,
                                            cart_id: @cart.id}, prerender: false) %>

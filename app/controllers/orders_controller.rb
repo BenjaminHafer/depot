@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
     authorize Order
     @orders = policy_scope(Order)
 
-    @orders = @orders.order('created_at desc').paginate(page: params[:page],per_page: 10)
+    @orders = @orders.order('created_at desc').page params[:page]
   end
 
   # GET /orders/1

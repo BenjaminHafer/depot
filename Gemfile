@@ -27,10 +27,15 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 gem 'faker'
-gem 'will_paginate'
+# gem 'will_paginate'
+gem 'kaminari'
+gem 'bourbon'
+gem 'administrate'
 gem 'devise'
 gem 'simple_form'
 gem 'pundit'
+
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

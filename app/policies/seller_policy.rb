@@ -14,4 +14,9 @@ class SellerPolicy
     @current_account == @seller.account
   end
 
+  # add this new method
+  def show_orders_for_seller?
+    @current_account == @seller.account
+  end
+
 end

@@ -11,6 +11,9 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
+  def pundit_user
+    current_account
+  end
 
 
   # GET /line_items/1
@@ -111,6 +114,7 @@ class LineItemsController < ApplicationController
 
   def show_orders_for_seller
     seller = Seller.find(params[:id])
+    authorize seller, :show_orders_for_seller?
     products = seller.products
     @line_items = LineItem.where(product_id: products)
     products.each do |product|
